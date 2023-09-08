@@ -1,6 +1,7 @@
 import os
 import sys
 
+
 sys.path.append(os.getcwd())
 
 
@@ -30,3 +31,7 @@ class Student(Base):
         return f"Student {self.id}: " \
             + f"{self.name}, " \
             + f"Grade {self.grade}"
+class Scholar(Base):
+    __tablename__ = 'scholars'
+    id = Column(Integer(), primary_key=True)
+    
